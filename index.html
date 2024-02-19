@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>squeezebox</title>
+    <link rel="stylesheet" href="" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(/shakespearean-tragedy.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Helvetica;
+        }
+
+        #accordion {
+            margin: 100px auto;
+            width: 600px;
+            margin-top: 150px;
+        }
+
+        #accordion li {
+            list-style: none;
+            width: 100%;
+            margin-bottom: 10px;
+            background: #fff;
+            padding: 10px;
+        }
+
+        #accordion li label {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 500;
+            color: dodgerblue;
+            cursor: pointer;
+        }
+
+        #accordion li label span {
+            transform: rotate(90deg);
+            font-size: 22px;
+        }
+
+        #accordion label+input[type="radio"] {
+            display: none;
+        }
+
+        #accordion .content {
+            padding: 0 10px;
+            line-height: 26px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s;
+        }
+
+        #accordion label+input[type="radio"]:checked+.content {
+            max-height: 400px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="accordion">
+        <li>
+            <label for="second">Shakespearean tragedy<span>&#x3e;</span></label>
+            <input type="radio" name="accordion" id="second" />
+            <div class="content">
+                <p>
+                    A Shakespearean tragedy typically involves a protagonist of noble stature facing a tragic downfall
+                    due to a fatal flaw or external circumstances. These tragedies explore themes of fate, ambition, and
+                    morality, often resulting in the protagonist's death and a sense of catharsis for the audience,
+                    reflecting on the complexities of the human condition.
+                </p>
+            </div>
+        </li>
+        <li>
+            <label for="third">List of Shakespearean Tragedies<span>&#x3e;</span></label>
+            <input type="radio" name="accordion" id="third" />
+            <div class="content">
+                <p>Hamlet</p>
+                <p>Macbeth</p>
+                <p>Othello</p>
+                <p>King Lear</p>
+                <p>Julius Caesar</p>
+            </div>
+        </li>
+    </ul>
+</body>
+
+</html>
